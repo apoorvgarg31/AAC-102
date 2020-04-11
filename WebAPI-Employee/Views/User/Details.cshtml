@@ -1,0 +1,95 @@
+﻿@model WebAPI_Employee.Models.EmpClass
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Employee Details</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            @Html.DisplayNameFor(model => model.Id)
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dd>
+            @Html.DisplayNameFor(model => model.UserName)
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dd>
+            @Html.DisplayNameFor(model => model.Empname)
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+
+            @Html.DisplayFor(model => model.Empname)
+        </dd>
+        <dd>
+            @Html.DisplayNameFor(model => model.Empemail)
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+
+            @Html.DisplayFor(model => model.Empemail)
+        </dd>
+        <dd>
+            @Html.DisplayNameFor(model => model.squad)
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+            &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+
+            @Html.DisplayFor(model => model.squad)
+        </dd>
+
+
+        <dd>
+            @Html.DisplayNameFor(model => model.emplocation)
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;
+
+            @Html.DisplayFor(model => model.emplocation)
+        </dd>
+
+
+        <dd>
+            @Html.DisplayNameFor(model => model.empdesignation)
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+
+
+            @Html.DisplayFor(model => model.empdesignation)
+        </dd>
+        <dd>
+            @Html.DisplayNameFor(model => model.IsActive)
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            &nbsp;&nbsp; &nbsp; &nbsp;
+
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+        <dd>
+            @Html.DisplayNameFor(model => model.Role)
+            &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            @Html.DisplayFor(model => model.Role)
+        </dd>
+
+
+
+
+
+    </dl>
+</div>
+<p>
+    <font color="#17A2b8">
+        <u>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        </u>
+    </font>
+    <font color="#17A2b8"><u> @Html.ActionLink("Back to List", "Index")</u></font>
+</p>

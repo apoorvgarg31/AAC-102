@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CommodityInfoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Sys_User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Empname" Type="nvarchar" MaxLength="200" />
+          <Property Name="Empemail" Type="nvarchar" MaxLength="200" />
+          <Property Name="emplocation" Type="nvarchar" MaxLength="200" />
+          <Property Name="empdesignation" Type="nvarchar" MaxLength="200" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Password" Type="nvarchar" MaxLength="200" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="200" />
+          <Property Name="Role" Type="nvarchar" MaxLength="200" />
+          <Property Name="squad" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CommodityInfo.dbo.dbo.[vUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="dbo_[vUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Empname" Type="nvarchar" MaxLength="200" />
+          <Property Name="Empemail" Type="nvarchar" MaxLength="200" />
+          <Property Name="emplocation" Type="nvarchar" MaxLength="200" />
+          <Property Name="empdesignation" Type="nvarchar" MaxLength="200" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Password" Type="nvarchar" MaxLength="200" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="200" />
+          <Property Name="Role" Type="nvarchar" MaxLength="200" />
+          <Property Name="squad" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="CommodityInfoModelStoreContainer">
+          <EntitySet Name="Sys_User" EntityType="Self.Sys_User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dbo_[vUsers" EntityType="Self.dbo_[vUsers" store:Type="Views" store:Schema="dbo" store:Name="dbo.[vUsers">
+            <DefiningQuery>SELECT 
+    [dbo_[vUsers].[Id] AS [Id], 
+    [dbo_[vUsers].[Empname] AS [Empname], 
+    [dbo_[vUsers].[Empemail] AS [Empemail], 
+    [dbo_[vUsers].[emplocation] AS [emplocation], 
+    [dbo_[vUsers].[empdesignation] AS [empdesignation], 
+    [dbo_[vUsers].[UserName] AS [UserName], 
+    [dbo_[vUsers].[Password] AS [Password], 
+    [dbo_[vUsers].[IsActive] AS [IsActive], 
+    [dbo_[vUsers].[Role] AS [Role], 
+    [dbo_[vUsers].[squad] AS [squad]
+    FROM [dbo].[dbo.[vUsers] AS [dbo_[vUsers]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CommodityInfoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Sys_User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Empname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Empemail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="emplocation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="empdesignation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="squad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="dbo__vUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Empname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Empemail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="emplocation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="empdesignation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="squad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="CommodityInfoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Sys_User" EntityType="Self.Sys_User" />
+          <EntitySet Name="dbo__vUsers" EntityType="Self.dbo__vUsers" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CommodityInfoModelStoreContainer" CdmEntityContainer="CommodityInfoEntities">
+          <EntitySetMapping Name="Sys_User">
+            <EntityTypeMapping TypeName="CommodityInfoModel.Sys_User">
+              <MappingFragment StoreEntitySet="Sys_User">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empname" ColumnName="Empname" />
+                <ScalarProperty Name="Empemail" ColumnName="Empemail" />
+                <ScalarProperty Name="emplocation" ColumnName="emplocation" />
+                <ScalarProperty Name="empdesignation" ColumnName="empdesignation" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="squad" ColumnName="squad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dbo__vUsers">
+            <EntityTypeMapping TypeName="CommodityInfoModel.dbo__vUsers">
+              <MappingFragment StoreEntitySet="dbo_[vUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Empname" ColumnName="Empname" />
+                <ScalarProperty Name="Empemail" ColumnName="Empemail" />
+                <ScalarProperty Name="emplocation" ColumnName="emplocation" />
+                <ScalarProperty Name="empdesignation" ColumnName="empdesignation" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="squad" ColumnName="squad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

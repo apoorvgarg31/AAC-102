@@ -1,0 +1,58 @@
+﻿@model WebAPI_Employee.Models.EmpClass
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EmpClass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Empname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Empemail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empemail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emplocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emplocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empdesignation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empdesignation)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
